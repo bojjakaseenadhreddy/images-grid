@@ -1,0 +1,11 @@
+<div class="image-preview" *ngIf="image">
+  <img [src]="image.Image" />
+  <div class="image-preview-info">
+    <p>{{image.likes}} Likes
+      <span>
+        <i class="bi bi-hand-thumbs-up" (click)="increaseLike()"></i>
+      </span>
+    </p>
+    <p> {{image.timestamp | date: 'YYYY-MM-dd h:mm:ss a'}}</p>
+  </div>
+</div>

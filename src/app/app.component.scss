@@ -1,0 +1,13 @@
+.app-container {
+  display: flex;
+  flex-direction: row;
+
+  &__grid {
+    height: 100vh;
+    width: 16vw;
+    overflow: scroll;
+  }
+  &__preview {
+    width: 85vw;
+  }
+}

@@ -1,0 +1,41 @@
+.image-grid {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+
+  &-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    margin-bottom: 0.7rem;
+
+
+    img {
+      width: 14vw;
+      height: 14vw;
+    }
+
+    &__info {
+      &__selected {
+      background-color: #6fbcff;
+      }
+      display: flex;
+      flex-direction: column;
+      padding: 3px;
+
+      &__likes {
+        margin: unset;
+      }
+
+      &__timestamp {
+        margin-top: 3px;
+      }
+    }
+  }
+}
+
+.sort-button {
+  border-radius: 3px;
+  background-color: aqua;
+  margin-bottom: 1rem;
+}

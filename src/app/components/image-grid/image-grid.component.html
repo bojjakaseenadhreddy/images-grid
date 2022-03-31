@@ -1,0 +1,17 @@
+<ng-container *ngIf="images">
+  <button class="sort-button" (click)="sortByLikes(ascendingOrder)">{{ascendingOrder  ? 'Ascending' : 'Descending'}}</button>
+
+  <div class="image-grid">
+    <ng-container *ngFor="let image of images; let i=index">
+      <div class="image-grid-card" (click)="selectImage(i, image)">
+        <div class="image-grid-card__image">
+          <img [src]="image.Image" />
+        </div>
+        <div class="image-grid-card__info" [class.image-grid-card__info__selected]="selectedImageIndex==i">
+          <p class="image-grid-card__info__likes"> {{image.likes}} Likes</p>
+          <p class="image-grid-card__info__timestamp"> {{image.timestamp | date: 'YYYY-MM-dd h:mm:ss a'}}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</ng-container>
